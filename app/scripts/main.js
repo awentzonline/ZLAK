@@ -58,7 +58,9 @@
     }
     function connectTo(peerId) {
         if (dataConnections[peerId] === undefined) {
+            console.log('attempting connection to ' + peerId);
             var connection = peer.connect(peerId);
+            console.log('connection underway');
             handleNewConnection(connection);
         }
     }
