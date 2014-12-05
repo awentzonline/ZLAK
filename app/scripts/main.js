@@ -58,11 +58,8 @@
     }
     function connectTo(peerId) {
         if (dataConnections[peerId] === undefined) {
-            console.log('attempting connection to ' + peerId);
             var connection = peer.connect(peerId);
-            console.log('connection pre-setup');
             handleNewConnection(connection);
-            console.log('connection setup complete')
         }
     }
     function sendPeerListTo(peerId) {
@@ -98,7 +95,7 @@
     $('.add-peer-form').submit(function (event) {
         event.preventDefault();
         var form = $(this);
-        var input = form.find('input[type="text"]');
+        var input = form.find('.peer-id');
         connectTo(input.val());
         input.val('');
         return false;
@@ -106,7 +103,7 @@
     $('.chat-form').submit(function (event) {
         event.preventDefault();
         var form = $(this);
-        var input = form.find('input[type="text"]');
+        var input = form.find('.chat-message');
         var message = input.val().trim();
         if (message) {
             logChat('You', message);
