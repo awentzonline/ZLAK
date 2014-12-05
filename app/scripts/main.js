@@ -60,8 +60,9 @@
         if (dataConnections[peerId] === undefined) {
             console.log('attempting connection to ' + peerId);
             var connection = peer.connect(peerId);
-            console.log('connection underway');
+            console.log('connection pre-setup');
             handleNewConnection(connection);
+            console.log('connection setup complete')
         }
     }
     function sendPeerListTo(peerId) {
