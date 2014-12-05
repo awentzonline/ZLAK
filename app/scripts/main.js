@@ -10,10 +10,10 @@
         config: {
             iceServers: [
                 {url: 'stun://stun.l.google.com:19302'},
-                {url: 'stun1://stun.l.google.com:19302'},
-                {url: 'stun2://stun.l.google.com:19302'},
-                {url: 'stun3://stun.l.google.com:19302'},
-                {url: 'stun4://stun.l.google.com:19302'}
+                {url: 'stun://stun1.l.google.com:19302'},
+                {url: 'stun://stun2.l.google.com:19302'},
+                {url: 'stun://stun3.l.google.com:19302'},
+                {url: 'stun://stun4.l.google.com:19302'}
             ]
         }
     });
