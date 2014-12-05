@@ -5,7 +5,18 @@
 
     var dataConnections = {};
 
-    var peer = new Peer({key: 'x6wcgg5nrtuzncdi'});
+    var peer = new Peer({
+        key: 'x6wcgg5nrtuzncdi',
+        config: {
+            iceServers: [
+                {url: 'stun://stun.l.google.com:19302'},
+                {url: 'stun1://stun.l.google.com:19302'},
+                {url: 'stun2://stun.l.google.com:19302'},
+                {url: 'stun3://stun.l.google.com:19302'},
+                {url: 'stun4://stun.l.google.com:19302'}
+            ]
+        }
+    });
     peer.on('open', function(id) {
         log('Your peer ID is: ' + id);
     });
